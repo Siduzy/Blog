@@ -1,0 +1,145 @@
+---
+layout: page
+title: Git Basic
+---
+<h3>Setup up git</h3>
+<hr />
+<h4>Install</h4>
+<ul>
+<li>Ubuntu
+<p><code>apt-get install git</code></li>
+</ul>
+<h4>Set up</h4>
+<ul>
+<li>Config username (best to user your GitHub username)
+<p><code>git config --global user.name "Your Name Here"</code></li>
+<li>Config email (best to use your GitHub email)
+<p><code>git config --global user.email "your_email@example.com"</code></li>
+<li>Save password for HTTPS URL (not SSH URL)
+<p><code>git config --global credential.helper 'cache --timeout=3600'</code></li>
+</ul>
+<h3>Create Repo</h3>
+<hr />
+<p>Once clicked 'Create a repo' on github, and filled the basic info. You need to do these steps:</p>
+<ul>
+<li>Create your local repo</li>
+<li>Add a README.md file</li>
+<li>Add comments and commit</li>
+<li>Update the GitHub side</li>
+</ul>
+<h4>Create local repo</h4>
+<ul>
+<li>Create a folder for Git:
+<p><code>mkdir ~/Git</code><br />
+<code>cd ~/Git</code></li>
+<li>Create a folder for your repo:
+<p><code>mkdir Man-Bash</code><br />
+<code>cd Man-Bash</code></li>
+<li>Initialize the <code>.git</code> folder at ~/Git/Man-bash:
+<p><code>git init</code><br />
+<code>ls -a</code></li>
+</ul>
+<h4>Add a README.md file</h4>
+<ul>
+<li>Create README.md for your repo
+<p><code>touch README.md</code></li>
+<li>Edit README</li>
+<li>Add the README to your local repo
+<p><code>git add README.md</code> for one file or <code>git add *</code> for all files at this level</li>
+</ul>
+<h4>Add comments and commit</h4>
+<ul>
+<li>Commit won't upload the file to the remote repo. It remembers the timepoint, only save the changed files, compress the files and so on.
+<p><code>git commit -m 'add README'</code></li>
+</ul>
+<h4>Update the GitHub side</h4>
+<ul>
+<li>Create a named repo
+<p><code>git remote add origin https://github.com/ZhangNaixiao/Man-Bash.git</code></li>
+<li>Push the commits to the 'master' branch.
+<p><code>git push origin master</code></li>
+</ul>
+<p><em>On the last setup, your real GitHub account (username/password) will be asked to enter.</em></p>
+<p>Then refresh your repo page on GitHub. You will see the ReadMe.md file is uploaded.</p>
+<h3>Pull your repo</h3>
+<hr />
+<p>You can download the remote repo to your local by do this:</p>
+<ul>
+<li>Tell git which repo you want to download
+<p><code>git clone https://github.com/ZhangNaixiao/Man-Bash.git</code></li>
+<li>Update it
+<p><code>git pull</code></li>
+</ul>
+<hr />
+<h3>Branch</h3>
+<p>A repo can be contributed by many people. So only one branch is not enough. We need more. Follow these steps:</p>
+<ul>
+<li>See current branches
+<p><code>git branch</code></li>
+<li>Create a new branch
+<p><code>git branch branchTest</code></li>
+<li>Change branch location to the new one
+<p><code>git checkout branchTest</code><br />
+<code>git branch</code></li>
+<li>Push
+<p><code>git push origin branchTest</code></li>
+</ul>
+<p>Now, a new branch will be created on your repo page on GitHub.</p>
+<ul>
+<li>Clone the new branch(branchTest) to <code>~/Git/branchTest</code>
+<p><code>git clone https://github.com/ZhangNaixiao/Man-Bash.git -b branchTest ~/Git/branchTest</code></li>
+<li>Add/change some files to new branch</li>
+<li>Add these files to local repo
+<p><code>git add *</code></li>
+<li>Commit
+<p><code>git commit -m 'update README.md'</code></li>
+<li>Push
+<p><code>git push origin branchTest</code></li>
+</ul>
+<h3>Rollback</h3>
+<hr />
+<p>If you commit by mistake, you can revert to a timepoint before, here are two basic tips:</p>
+<h4>Revert and keep the commit log</h4>
+<ul>
+<li>Revert to a commit code.
+<p><code>git revert 7b863499dd7115298ad00bb7d8475d619f223dd9</code></li>
+<li>Push
+<p><code>git push origin branchTest</code></li>
+</ul>
+<p>The README.md at branchTest will be deleted and there will be a new commit at branchTest branch on your GitHub page.</p>
+<h4>Revert but not keep the commit log</h4>
+<ul>
+<li>Revert to a commit code.
+<p><code>git reset 5b1798ff27a19b0fdeb95230719f5689e3f2df3e --hard</code></li>
+<li>Force Push
+<p><code>git push origin branchTest -f</code></li>
+</ul>
+<h3>Diff and Merge</h3>
+<hr />
+<p>After do the changes on branchTest, useful changes should be merge to the 'master' branch.</p>
+<ul>
+<li>Switch to branch 'branchTest'
+<p><code>git checkout branchTest</code></li>
+<li>See the log of changed file
+<p><code>git log -- README.md</code></li>
+<li>See the diff
+<p><code>git diff &lt;commit1&gt; &lt;commit2&gt; README.md</code></li>
+<li>Switch to the branch you want to merge into(here is 'master')
+<p><code>git checkout master</code></li>
+<li>Merge branch
+<p><code>git merge branchTest</code></li>
+<li>Push
+<p><code>git push origin master</code></li>
+</ul>
+<h3>Del the branch</h3>
+<hr />
+<ul>
+<li>See the latest changes
+<p><code>git branch -v</code></li>
+<li>After ensured nothing to worried, switch to another branch
+<p><code>git checkout master</code></li>
+<li>Delete the branch
+<p><code>git branch -d branchTest</code></li>
+<li>Delete the remote branch
+<p><code>git push origin :heads/branchTest</code></li>
+</ul>
