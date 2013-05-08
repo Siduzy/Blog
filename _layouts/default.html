@@ -16,26 +16,20 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ZhangNaixiao">View on GitHub</a>
-
-          <h1 id="project_title">Zhangnaixiao.github.io</h1>
-          <h2 id="project_tagline"></h2>
-        <ul class="navigation">
-        <li><a href="/photos/"{% if page.url contains "/photos/" %}class="active"{% endif %} title="A selection of recent photography">Photography</a></li>
-
-        <li><a href="/about/"{% if page.url contains "/about/" %}class="active"{% endif %}>About me</a></li>
-      </ul>
+          <a id="forkme_banner" href="https://github.com/ZhangNaixiao">Blog</a>
+          <a id="" href="">About me</a>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
-
+    {{ content }}
     <!-- FOOTER -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
+    
+    {% include analytics.html %}
   </body>
 </html>
