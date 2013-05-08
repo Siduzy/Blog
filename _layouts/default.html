@@ -1,19 +1,41 @@
 <!DOCTYPE html>
+<html>
 
-　　<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Zhangnaixiao.github.io : " />
 
-　　<head>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Sid's Biz</title>
+  </head>
 
-　　　　<title>{{ page.title }}</title>
+  <body>
 
-　　</head>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ZhangNaixiao">View on GitHub</a>
 
-　　<body>
+          <h1 id="project_title">Zhangnaixiao.github.io</h1>
+          <h2 id="project_tagline"></h2>
+        <ul class="navigation">
+        <li><a href="/photos/"{% if page.url contains "/photos/" %}class="active"{% endif %} title="A selection of recent photography">Photography</a></li>
 
-　　　　{{ content }}
+        <li><a href="/about/"{% if page.url contains "/about/" %}class="active"{% endif %}>About me</a></li>
+      </ul>
+        </header>
+    </div>
 
-　　</body>
+    <!-- MAIN CONTENT -->
 
-　　</html>
+    <!-- FOOTER -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+  </body>
+</html>
