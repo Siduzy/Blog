@@ -3,7 +3,7 @@
   <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
     {{ post.date | date: "%b %d, %Y" }}
   </info>
-  <div class="body">{{ post.content }}</div>
+  <div class="body">{{ post.content | truncatewords: 30}}</div>
   <div class="breaker"></div>
   <info class="empty after">
   </info>
