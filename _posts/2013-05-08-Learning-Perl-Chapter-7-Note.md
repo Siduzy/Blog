@@ -1,5 +1,6 @@
 ---
 layout: post
+disqus_comments: true
 title: 正则表达式
 ---
 
