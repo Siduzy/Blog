@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: 正则表达式
 ---
 
