@@ -314,9 +314,11 @@ Full-Width Styles
   background: linear-gradient(top, #373737, #212121);
 }
 
+
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 50px 10px 10px 300px;
 }
+
 
 #project_title {
   margin: 0;
@@ -326,6 +328,7 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
+
 #project_tagline {
   color: #fff;
   font-size: 24px;
@@ -333,6 +336,7 @@ Full-Width Styles
   background: none;
   text-shadow: #111 0px 0px 10px;
 }
+
 
 #downloads {
   position: absolute;
@@ -344,6 +348,7 @@ Full-Width Styles
   background: url('../images/icon_download.png') no-repeat 0% 90%;
 }
 
+
 .zip_download_link {
   display: block;
   float: right;
@@ -353,6 +358,7 @@ Full-Width Styles
   overflow: hidden;
   background: url(../images/sprite_download.png) no-repeat bottom left;
 }
+
 
 .tar_download_link {
   display: block;
@@ -365,13 +371,16 @@ Full-Width Styles
   margin-left: 10px;
 }
 
+
 .zip_download_link:hover {
   background: url(../images/sprite_download.png) no-repeat top left;
 }
 
+
 .tar_download_link:hover {
   background: url(../images/sprite_download.png) no-repeat top right;
 }
+
 
 #main_content_wrap {
   background: #f2f2f2;
@@ -379,9 +388,11 @@ Full-Width Styles
   border-bottom: 1px solid #111;
 }
 
+
 #main_content {
   padding-top: 40px;
 }
+
 
 #footer_wrap {
   background: #212121;
@@ -389,56 +400,71 @@ Full-Width Styles
 
 
 
+
+
+
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
+
 
 @media screen and (max-width: 480px) {
   body {
     font-size:14px;
   }
 
+
   #downloads {
     display: none;
   }
+
 
   .inner {
     min-width: 320px;
     max-width: 480px;
   }
 
+
   #project_title {
   font-size: 32px;
   }
+
 
   h1 {
     font-size: 28px;
   }
 
+
   h2 {
     font-size: 24px;
   }
+
 
   h3 {
     font-size: 21px;
   }
 
+
   h4 {
     font-size: 18px;
   }
+
 
   h5 {
     font-size: 14px;
   }
 
+
   h6 {
     font-size: 12px;
   }
+
 
   code, pre {
     min-width: 320px;
     max-width: 480px;
     font-size: 11px;
   }
+
 
 }
