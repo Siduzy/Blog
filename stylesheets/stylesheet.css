@@ -281,9 +281,9 @@ Full-Width Styles
   display: block;
   position: absolute;
   top:0;
-  right: 230px;
+  right: 220px;
   z-index: 10;
-  padding: 8px 25px 2px 25px;
+  padding: 8px 30px 2px 30px;
   color: #fff;
   background: #0090ff no-repeat 95% 50%;
   font-weight: 700;
