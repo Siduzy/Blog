@@ -1,0 +1,27 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Sid's Biz</title>
+ <link href="http://ZhangNaixiao.github.com/blog/feed/atom.xml" rel="self"/>
+ <link href="http://ZhangNaixiao.github.com/blog/feed"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>http://ZhangNaixiao.github.com/blog/feed</id>
+ <author>
+   <name>ZhangNaixiao</name>
+   <email>Zhangnaixiao@me.com</email>
+ </author>
+
+ {% for post in site.posts %}
+ <entry>
+   <title>{{ post.title }}</title>
+   <link href="http://ZhangNaixiao.github.com/blog{{ post.url }}"/>
+   <updated>{{ post.date | date_to_xmlschema }}</updated>
+   <id>http://ZhangNaixiao.github.com/blog{{ post.id }}.html</id>
+   <content type="html">{{ post.content | xml_escape }}</content>
+ </entry>
+ {% endfor %}
+ 
+</feed>
