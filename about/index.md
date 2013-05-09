@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Who am I
 ---
 I am a little pea
