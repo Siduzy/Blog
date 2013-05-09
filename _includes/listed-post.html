@@ -1,11 +1,8 @@
-<div class="post">
-  <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
-    {{ post.date | date: "%b %d, %Y" }}
-  </info>
-  <div class="body">{{ post.content | truncatewords: 30}}</div>
-  <a href=".{{post.url}}">Read More<a>
-  <div class="breaker"></div>
-  <info class="empty after">
-  </info>
-</div>
+ <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+ <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
+   {{ post.date | date: "%b %d, %Y" }}
+ </info>
+ <div class="body">{{ post.content | truncatewords: 30}}</div>
+ <a href=".{{post.url}}">Read More<a>
+ <info class="empty after">
+ </info>
