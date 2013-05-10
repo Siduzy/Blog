@@ -7,6 +7,15 @@ layout: default
 <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
       {{ page.date | date: "%b %d, %Y" }}
 </info>
+
+
+Posted on {{ page.date | format_date }}
+{% if page.category %} in <a href="/categories/{{ page.category | slugize }}">{{ page.category }}</a> {% endif %}
+
+{% for tag in page.tags %}
+<a href="/tags/{{ tag| slugize }}">{{ tag }}</a>
+{% endfor %}
+
 <div class="body">{{ content }}</div>
 <br/>
 <br/>
