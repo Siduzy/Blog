@@ -4,16 +4,6 @@ layout: default
 <section id="main_content" class="inner">
 <h1>{{ page.title }}</h1>
 
-<info datetime="{{ page.date | date: "%Y-%m-%d" }}">
-      {{ page.date | date: "%b %d, %Y" }}
-      {% if page.category %} Category:<a href="/categories/{{ page.category | slugize }}">{{ page.category }}</a> {% endif %}
-      <br/>
-      Tags:
-      {% for tag in page.tags %}
-      <a href="/tags/{{ tag| slugize }}">{{ tag }}</a>
-      {% endfor %}
-</info>
-
 <div class="body">{{ content }}</div>
 <br/>
 <br/>
@@ -26,6 +16,14 @@ layout: default
     {% endfor %}
   </ul>
 </nav>
+<div class='tags'>
+      tags:
+      <ul>
+    {% for t in post.tags %}
+    <li><a href='http://www.google.com/search?q={{ t | escape }}+site:zhangnaixiao.github.com'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}</li>
+    {% endfor %}
+      </ul>
+</div>
 <hr/>
 <h3>Comments</h3>
   {% if page.disqus_comments %}
