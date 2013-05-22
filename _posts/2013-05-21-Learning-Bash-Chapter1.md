@@ -1,12 +1,11 @@
-----------------------------------------------------------------
+---
 layout: post
 disqus_comments: true
 title: Learning Bash Note - Chapter 1
 category: Bash
 tags:
  - Basic
-
-----------------------------------------------------------------
+---
 
 #### Intro ####
 
