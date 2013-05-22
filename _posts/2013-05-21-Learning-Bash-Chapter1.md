@@ -11,7 +11,7 @@ tags:
 
 显示 bash 版本 `echo $BASH_VERSION`
 
-\#!/bin/bash
+`#!/bin/bash`
 
 ---
 
