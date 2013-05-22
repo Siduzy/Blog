@@ -147,25 +147,25 @@ __建议__ :
 
 控制键
 
-控制键 	stty名	功能
+> 控制键 	stty名	功能
 
-- - - - - - - - - - - - - - - - - - - - - -
+> - - - - - - - - - - - - - - - - - - - - - -
 
-CTRL-C  intr    中止当前命令
+> CTRL-C  intr    中止当前命令
 
-CTRL-\  quit    如果CTRL-C无效，则中止当前命令
+> CTRL-\  quit    如果CTRL-C无效，则中止当前命令
 
-CTRL-D  eof     输入结束
+> CTRL-D  eof     输入结束
 
-CTRL-S  stop    停止输出到屏幕
+> CTRL-S  stop    停止输出到屏幕
 
-CTRL-Q          重新开始到屏幕的输出
+> CTRL-Q          重新开始到屏幕的输出
 
-CTRL-?  erase   删除最后的字符
+> CTRL-?  erase   删除最后的字符
 
-CTRL-U  kill    删除整个命令行
+> CTRL-U  kill    删除整个命令行
 
-CTRL-Z  susp    暂停当前命令
+> CTRL-Z  susp    暂停当前命令
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
