@@ -29,32 +29,32 @@ shell 脚本: 包含 shell 命令的文件
 
 函数: 
 
-function functionname
+`function functionname`
 
-{
+`{`
     
-    shell commands
+`    shell commands`
 
-}
+`}`
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 试着用 `source function.sh` 和 `./function.sh` 分别运行此脚本function.sh,并查看输出.
 
-#!/bin/bash
+`#!/bin/bash`
 
-function ls {
-	#unset -f ls
-	ls ~/ > ~/fromfunc.txt
-}
+`function ls {`
+`	#unset -f ls`
+`	ls ~/ > ~/fromfunc.txt`
+`}`
 
-declare -f > before.txt
+`declare -f > before.txt`
 
-ls
+`ls`
 
-declare -f > after.txt
+`declare -f > after.txt`
 
-ls
+`ls`
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
