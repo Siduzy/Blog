@@ -1,6 +1,11 @@
-#### Chapter 4 ####
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+---
+layout: post
+disqus_comments: true
+title: Learning Bash Note - Chapter 4
+category: Bash
+tags:
+ - Basic
+---
 
 shell 脚本: 包含 shell 命令的文件
 
