@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 disqus_comments: true
 title: WinDbg Setup
