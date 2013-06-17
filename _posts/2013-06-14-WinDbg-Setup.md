@@ -1,6 +1,10 @@
----
-
-
+﻿---
+layout: post
+disqus_comments: true
+title: WinDbg Setup
+category: WinDbg
+tags:
+ - Setup
 ---
 
 #### 什么时候会用到 WinDbg ####
